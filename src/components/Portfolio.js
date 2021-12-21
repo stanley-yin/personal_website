@@ -48,7 +48,7 @@ function Portfolio() {
               <div className="col-xl-6 col-12">
                 {/* 照片demo */}
                 <div class="project-img">
-                  <img src={`${devUrl}/images/inline.png`} alt="" />
+                  <img src={`https://stanley-yin.github.io/personal_website/images/inline.png`} alt="" />
                 </div>
               </div>
 
