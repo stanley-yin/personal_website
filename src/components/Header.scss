@@ -1,0 +1,22 @@
+.nav-line {
+  width: 0%;
+  transform: translateY(5px);
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--second);
+}
+.nav-link:hover {
+  .nav-line {
+    animation: UnderLine .5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes UnderLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
