@@ -3,7 +3,6 @@ import PageTitle from "./PageTitle";
 import { devUrl } from "../config/index";
 import { Player } from "video-react";
 import "./Portfolio.css";
-import logo from './logo512.png'
 
 function Portfolio() {
   return (
@@ -49,7 +48,7 @@ function Portfolio() {
               <div className="col-xl-6 col-12">
                 {/* 照片demo */}
                 <div class="project-img">
-                  <img src={logo} alt="" />
+                  <img src={`${devUrl}/images/inline.png`} alt="" />
                 </div>
               </div>
 
