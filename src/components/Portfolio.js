@@ -2,8 +2,9 @@ import React from "react";
 import PageTitle from "./PageTitle";
 import { devUrl } from "../config/index";
 import { Player } from "video-react";
-
 import "./Portfolio.css";
+import logo from './logo512.png'
+
 function Portfolio() {
   return (
     <>
@@ -27,6 +28,7 @@ function Portfolio() {
                   <a
                     href="https://stanley-yin.github.io/inline/inline.html"
                     target="_blank"
+                    rel="noreferrer"
                     alt=""
                   >
                     https://stanley-yin.github.io/inline/inline.html
@@ -47,7 +49,7 @@ function Portfolio() {
               <div className="col-xl-6 col-12">
                 {/* 照片demo */}
                 <div class="project-img">
-                  <img src={`${devUrl}/images/inline.png`} alt="" />
+                  <img src={logo} alt="" />
                 </div>
               </div>
 
@@ -58,6 +60,7 @@ function Portfolio() {
                   <a
                     href="https://stanley-yin.github.io/inline/inline.html"
                     target="_blank"
+                    rel="noreferrer"
                     alt=""
                   >
                     https://stanley-yin.github.io/inline/inline.html

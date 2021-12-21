@@ -1,1 +1,1 @@
-export const devUrl = 'http://localhost:3000'
+export const devUrl = 'https://stanley-yin.github.io/personal_website/'
