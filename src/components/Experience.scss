@@ -1,65 +1,68 @@
-
 .experience_type_box {
-    color: gray;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .experience_type  {
-    font-size: 26px;
-    @media screen and (max-width: 430px) {
+  color: gray;
+  display: flex;
+  justify-content: space-evenly;
+}
+.experience_type {
+  font-size: 26px;
+  @media screen and (max-width: 430px) {
     font-size: 22px;
+  }
+}
+.experience_type {
+  cursor: pointer;
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+.experience_type:hover {
+  color: var(--second);
+}
 
-    }
-  }
-  .experience_type {
-    cursor: pointer;
-    margin-bottom: 50px;
-    font-weight: bolder;
+.actived {
+  color: var(--second);
+}
+.event-item {
+  text-align: start;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+.event-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
 
-  }
-  .experience_type:hover {
-    color: var(--second);
-  }
-  
-  .actived{
-    color: var(--second);
-  }
-  .event-item {
-    text-align: start;
-    margin-bottom: 15px;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 1.5rem;
-  }
-  .event-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 0px;
-  }
-  
-  .event-item p,
-  span,
-  i {
-    font-size: 16px;
-    color: gray;
-    word-break: break-all;
-  }
-  .calender {
-    font-size: 16px;
-    color: gray;
-  }
-  
-  .rounder {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: var(--second);
-  }
-  .line {
-    display: block;
-    width: 1px;
-    height: 110%;
-    background-color: var(--second);
-    transform: translate(7px, -6px);
-  }
+.event-item .detail {
+  font-size: 16px;
+  color: gray;
+  word-break: break-all;
+  margin: 10px 0;
+}
+
+.calender {
+  font-size: 16px;
+  color: gray;
+  margin-top: 10px;
+  line-height: 16px;
+}
+.calender_icon{
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.rounder {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--second);
+}
+.line {
+  display: block;
+  width: 1px;
+  height: 130%;
+  background-color: var(--second);
+  transform: translate(7px, -6px);
+}

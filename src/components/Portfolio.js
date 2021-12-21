@@ -1,6 +1,6 @@
 import React from "react";
 import PageTitle from "./PageTitle";
-import { devUrl } from "../config/index";
+import { imgUrl } from "../config/index";
 import { Player } from "video-react";
 import "./Portfolio.css";
 
@@ -16,7 +16,7 @@ function Portfolio() {
               <div className="col-xl-6 col-12">
                 {/* 照片demo */}
                 <div class="project-img">
-                  <img src={`${devUrl}/images/inline.png`} alt="" />
+                  <img src={`${imgUrl}/images/inline.png`} alt="" />
                 </div>
               </div>
 
@@ -48,7 +48,7 @@ function Portfolio() {
               <div className="col-xl-6 col-12">
                 {/* 照片demo */}
                 <div class="project-img">
-                  <img src={`https://stanley-yin.github.io/personal_website/images/inline.png`} alt="" />
+                  <img src={`${imgUrl}/images/inline.png`} alt="" />
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ function Portfolio() {
               <div className="col-xl-6 col-12">
                 {/* 照片demo */}
                 <Player className="project-img">
-                  <source src={`${devUrl}/video/線上藥局demo影片.mp4`} />
+                  <source src={`${imgUrl}/video/線上藥局demo影片.mp4`} />
                 </Player>
               </div>
 

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import PageTitle from "./PageTitle";
-import { devUrl } from "../config/index";
+import { imgUrl } from "../config/index";
 import { IoSchoolOutline } from "react-icons/io5";
 import { BsBriefcase } from "react-icons/bs";
 import "./Experience.scss";
-
+import ExperienceItem from "./ExperienceItem";
 /* 經歷 */
 const ExperienceBox = styled.div`
   position: relative;
@@ -55,7 +55,7 @@ function Experience() {
                       work: "close",
                     };
                     setIsActive(updateState);
-                    handleActive('education');
+                    handleActive("education");
                   }}
                 >
                   <IoSchoolOutline />
@@ -74,7 +74,7 @@ function Experience() {
                       work: "open",
                     };
                     setIsActive(updateState);
-                    handleActive('work');
+                    handleActive("work");
                   }}
                 >
                   <BsBriefcase />
@@ -87,92 +87,47 @@ function Experience() {
               {isActive.education === "open" && (
                 <div id="education">
                   {/* 學校經歷1 */}
-                  <div className="event-item">
-                    <div className="event-data ms-auto">
-                      <h3>資策會</h3>
-                      <span>前端工程師養成班</span>
-                      <div className="calender">
-                        <i className="fas fa-calendar-alt"></i>
-                        2021.5-2021.11
-                      </div>
-                    </div>
-                    <div>
-                      <span className="rounder"></span>
-                      <span className="line"></span>
-                    </div>
-                    <div></div>
-                  </div>
-                  {/* 學校經歷2 */}
-                  <div className="event-item">
-                    <div></div>
-                    <div>
-                      <span className="rounder"></span>
-                      <span className="line"></span>
-                    </div>
+                  <ExperienceItem
+                    assoc="資策會"
+                    detail="前端工程師養成班"
+                    time="2021.5 - 2021.11"
+                    isOdd={true}
+                  />
 
-                    <div className="event-data me-auto">
-                      <h3>台灣師範大學</h3>
-                      <span>企業管理學系</span>
-                      <div className="calender">
-                        <i className="fas fa-calendar-alt"></i>
-                        2017-2021
-                      </div>
-                    </div>
-                  </div>
+                  {/* 學校經歷2 */}
+                  <ExperienceItem
+                    assoc="國立台灣師範大學"
+                    detail="企業管理學系"
+                    time="2017-2021"
+                    isOdd={false}
+                  />
                   {/* 學校經歷3 */}
-                  <div className="event-item">
-                    <div className="event-data ms-auto">
-                      <h3>國立台中二中</h3>
-                      <span>前端工程師養成班</span>
-                      <div className="calender">
-                        <i className="fas fa-calendar-alt"></i>
-                        2015-2017
-                      </div>
-                    </div>
-                    <div>
-                      <span className="rounder"></span>
-                      <span className="line"></span>
-                    </div>
-                    <div></div>
-                  </div>
+                  <ExperienceItem
+                    assoc="國立台中二中"
+                    detail=""
+                    time="2015-2017"
+                    isOdd={true}
+                  />
                 </div>
               )}
 
               {isActive.work === "open" && (
                 <>
                   {/* 工作經歷1 */}
-                  <div className="event-item">
-                    <div className="event-data ms-auto">
-                      <h3>Shopline商線有限公司</h3>
-                      <span>客戶規劃實習生</span>
-                      <div className="calender">
-                        <i className="fas fa-calendar-alt"></i>
-                        2020.5-2020.12
-                      </div>
-                    </div>
-                    <div>
-                      <span className="rounder"></span>
-                      <span className="line"></span>
-                    </div>
-                    <div></div>
-                  </div>
-                  {/* 工作經歷2 */}
-                  <div className="event-item">
-                    <div></div>
-                    <div>
-                      <span className="rounder"></span>
-                      <span className="line"></span>
-                    </div>
+                  <ExperienceItem
+                    assoc="Shopline商線有限公司"
+                    detail="客戶規劃實習生"
+                    time="2020.5-2020.12"
+                    isOdd={true}
+                  />
 
-                    <div className="event-data me-auto">
-                      <h3>采威國際資訊有限公司</h3>
-                      <span>業務實習生</span>
-                      <div className="calender">
-                        <i className="fas fa-calendar-alt"></i>
-                        2019.7-2019.9
-                      </div>
-                    </div>
-                  </div>
+                  {/* 工作經歷2 */}
+                  <ExperienceItem
+                    assoc="采威國際資訊有限公司"
+                    detail="業務實習生"
+                    time="2019.7-2019.9"
+                    isOdd={false}
+                  />
                 </>
               )}
             </div>

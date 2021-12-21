@@ -31,7 +31,7 @@ function Skills() {
                     <ul>
                       <li>React</li>
                       <li>HTML</li>
-                      <li>CSS</li>
+                      <li>CSS/SCSS</li>
                       <li>JavaScript</li>
                       <li>BootStrap</li>
                       <li>JQuery</li>
@@ -62,7 +62,7 @@ function Skills() {
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
                     <MdDraw />
-                    美編
+                    設計
                   </Accordion.Header>
                   <Accordion.Body>
                     <ul>
