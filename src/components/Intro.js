@@ -84,7 +84,7 @@ function Intro() {
             <div className="col-xl-6 col-12">
               <MyPhoto>
                 <img
-                  src="http://localhost:3000/images/S__48398358.jpg"
+                  src="../../public/images/S__48398358.jpg"
                   alt=""
                 />
               </MyPhoto>
