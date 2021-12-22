@@ -2,7 +2,7 @@ import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 
 function ExperienceItem(props) {
-  const { assoc, detail, time, isOdd } = props;
+  const { assoc, detail, time, isOdd, islast } = props;
   return (
     <div className="event-item">
       {/* 奇數顯示這個區域 */}
@@ -19,7 +19,7 @@ function ExperienceItem(props) {
           {/* 圓點*線 */}
           <div>
             <span className="rounder"></span>
-            <span className="line"></span>
+            {!islast && <span className="line"></span>}
           </div>
           <div></div>
         </>
@@ -32,7 +32,7 @@ function ExperienceItem(props) {
           <div></div>
           <div>
             <span className="rounder"></span>
-            <span className="line"></span>
+            {!islast && <span className="line"></span>}
           </div>
           <div className="event-data me-auto">
             <h3>{assoc}</h3>

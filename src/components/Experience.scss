@@ -6,7 +6,7 @@
 .experience_type {
   font-size: 26px;
   @media screen and (max-width: 430px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .experience_type {
@@ -29,9 +29,13 @@
   column-gap: 1.5rem;
 }
 .event-item h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 0px;
+  @media screen and (max-width: 430px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
 .event-item .detail {

@@ -12,6 +12,9 @@ const ExperienceBox = styled.div`
   padding: 5px 15px 50px;
   margin: 0 auto 30px;
   max-width: 80%;
+  @media screen and (max-width: 430px) {
+    max-width:100%
+  }
 `;
 
 const YellowBg = styled.div`
@@ -107,6 +110,7 @@ function Experience() {
                     detail=""
                     time="2015-2017"
                     isOdd={true}
+                    islast={true}
                   />
                 </div>
               )}
@@ -127,6 +131,7 @@ function Experience() {
                     detail="業務實習生"
                     time="2019.7-2019.9"
                     isOdd={false}
+                    islast={true}
                   />
                 </>
               )}

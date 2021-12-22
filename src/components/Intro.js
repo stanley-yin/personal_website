@@ -28,16 +28,27 @@ function Intro() {
             </div>
             {/* 右邊個人文字 */}
             <div className="col-xl-6 col-12">
-              <div className="content_box">
+              <div className="content_box ">
                 {/* 名字&個人連結 */}
-                <div className="d-flex align-items-end">
+                <div className="d-xl-flex align-items-end">
                   <div className="name">尹相宸</div>
-                  <a href="https://www.facebook.com/profile.php?id=100001595680457">
-                    <FaFacebook className="social_media_icon" />
-                  </a>
-                  <a href="https://github.com/stanley-yin">
-                    <AiFillGithub className="social_media_icon" />
-                  </a>
+                  {/* 個人社群連結 */}
+                  <div className="media_box">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100001595680457"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaFacebook className="social_media_icon " />
+                    </a>
+                    <a
+                      href="https://github.com/stanley-yin"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <AiFillGithub className="social_media_icon" />
+                    </a>
+                  </div>
                 </div>
                 {/* 座右銘 */}
                 <div className="wrapper">
@@ -47,7 +58,7 @@ function Intro() {
                 </div>
                 {/* 文字簡介 */}
                 <div className="intro_p">
-                本該走上管理、行銷相關領域的企管系學生，在大四的課程及電商新創實習中接觸了Python、網頁前端，對寫程式和製作網頁產生了濃厚的興趣，開始透過網路課程自學相關技術。
+                  本該走上管理、行銷相關領域的企管系學生，在大四的課程及電商新創實習中接觸了Python、網頁前端，對寫程式和製作網頁產生了濃厚的興趣，開始透過網路課程自學相關技術。
                 </div>
                 {/* CV btn */}
                 <a

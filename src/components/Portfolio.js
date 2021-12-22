@@ -2,7 +2,8 @@ import React from "react";
 import PageTitle from "./PageTitle";
 import { imgUrl } from "../config/index";
 import { Player } from "video-react";
-import "./Portfolio.css";
+import "./Portfolio.scss";
+import PortfolioItem from "./PortfolioItem";
 
 function Portfolio() {
   return (
@@ -11,97 +12,20 @@ function Portfolio() {
       <div className="container">
         <div className="portfolio" id="myportfolio">
           <PageTitle title={"Portfolio"} />
-          <div className="project-item">
-            <div className="row">
-              <div className="col-xl-6 col-12">
-                {/* 照片demo */}
-                <div class="project-img">
-                  <img src={`${imgUrl}/images/inline.png`} alt="" />
-                </div>
-              </div>
-
-              <div class="col-xl-6">
-                {/* 主標題 */}
-                <h3 class="project-title">Inline官網切版</h3>
-                <div class="link">
-                  <a
-                    href="https://stanley-yin.github.io/inline/inline.html"
-                    target="_blank"
-                    rel="noreferrer"
-                    alt=""
-                  >
-                    https://stanley-yin.github.io/inline/inline.html
-                  </a>
-                </div>
-                {/* 內文 */}
-                <p class="project-content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet temporibus, laudantium sed dolorum ea deserunt nostrum
-                  suscipit odit sint eum, laboriosam possimus architecto
-                  voluptates aliquid quas totam, sunt ab quod!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project-item">
-            <div className="row">
-              <div className="col-xl-6 col-12">
-                {/* 照片demo */}
-                <div class="project-img">
-                  <img src={`${imgUrl}/images/inline.png`} alt="" />
-                </div>
-              </div>
-
-              <div class="col-xl-6">
-                {/* 主標題 */}
-                <h3 class="project-title">Inline官網切版</h3>
-                <div class="link">
-                  <a
-                    href="https://stanley-yin.github.io/inline/inline.html"
-                    target="_blank"
-                    rel="noreferrer"
-                    alt=""
-                  >
-                    https://stanley-yin.github.io/inline/inline.html
-                  </a>
-                </div>
-                {/* 內文 */}
-                <p class="project-content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet temporibus, laudantium sed dolorum ea deserunt nostrum
-                  suscipit odit sint eum, laboriosam possimus architecto
-                  voluptates aliquid quas totam, sunt ab quod!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project-item">
-            <div className="row">
-              <div className="col-xl-6 col-12">
-                {/* 照片demo */}
-                <Player className="project-img">
-                  <source src={`${imgUrl}/video/線上藥局demo影片.mp4`} />
-                </Player>
-              </div>
-
-              <div class="col-xl-6">
-                {/* 主標題 */}
-                <h3 class="project-title">線上藥局網站</h3>
-                <div class="link">
-                  <a href="" alt="">
-                    www.edhudhud.com
-                  </a>
-                </div>
-                {/* 內文 */}
-                <p class="project-content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet temporibus, laudantium sed dolorum ea deserunt nostrum
-                  suscipit odit sint eum, laboriosam possimus architecto
-                  voluptates aliquid quas totam, sunt ab quod!
-                </p>
-              </div>
-            </div>
-          </div>
+          <PortfolioItem
+            imgFileName="inline.png"
+            title="Inline官網切版"
+            link="https://stanley-yin.github.io/inline/inline.html"
+            hashtag={["HTML", "CSS", "BootStrap", "JavaScript"]}
+            content="在資策會利用所學製作出的手機、電腦兩個版型的RWD官網，也搭配JavaScript 做出nav-bar的變色特效。"
+          />
+          <PortfolioItem
+            videoSrc="https://www.youtube.com/embed/WNIqDNH-Me4"
+            title="線上藥局網站"
+            link="https://stanley-yin.github.io/inline/inline.html"
+            hashtag={["React", "HTML", "CSS", "BootStrap", "JavaScript"]}
+            content="在資策會利用所學製作出的手機、電腦兩個版型的RWD官網，也搭配JavaScript 做出nav-bar的變色特效。"
+          />
         </div>
       </div>
     </>

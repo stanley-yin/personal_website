@@ -7,8 +7,8 @@ const MyPageTitle = styled.h1`
   font-size: 36px;
   font-weight: bold;
   @media screen and (max-width: 430px) {
-    font-size: 30px;
-    margin: 0 0 20px 0 ;
+    font-size: 1.5rem;
+    margin: 20px 0  ;
   }
 `;
 
