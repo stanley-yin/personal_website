@@ -3,6 +3,8 @@ import styled from "styled-components";
 import PageTitle from "./PageTitle";
 import Accordion from "react-bootstrap/Accordion";
 import { DiJavascript, DiCode, DiDatabase } from "react-icons/di";
+import { BsPencilFill } from "react-icons/bs";
+
 import { MdDraw } from "react-icons/md";
 /* 技能 */
 
@@ -61,7 +63,7 @@ function Skills() {
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
-                    <MdDraw />
+                    <BsPencilFill />
                     設計
                   </Accordion.Header>
                   <Accordion.Body>

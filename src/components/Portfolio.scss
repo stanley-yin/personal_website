@@ -1,10 +1,14 @@
 /* 作品集 */
 .portfolio {
-    max-width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
-.project-item{
+.project-item {
+  margin-bottom: 50px;
+  position: relative;
+  @media screen and (max-width: 430px) {
     margin-bottom: 50px;
+  }
 }
 
 .project-img {
@@ -13,10 +17,14 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
 .project-title {
   font-size: 24px;
   margin: 10px 0;
   font-weight: bold;
+  @media screen and (max-width: 430px) {
+    font-size: 20px;
+  }
 }
 
 .link {
@@ -25,14 +33,28 @@
 .link a {
   color: rgb(20, 86, 230);
 }
-@media screen and (max-width: 430px) {
+.project-content {
+  line-height: 1.5rem;
 }
 
-.tag{
+.tag {
   color: var(--second);
   background-color: var(--primary);
   padding: 5px 10px;
   border-radius: 6px;
   margin: 5px 5px 5px 0;
   display: inline-block;
+  @media screen and (max-width: 430px) {
+    font-size: 14px;
+  }
 }
+
+// .demo_btn {
+//   color: white;
+//   line-height: 45px;
+//   padding: 0px 10px;
+//   background-color: var(--second);
+//   border-radius: 10px;
+//   position: absolute;
+//   bottom: 0px;
+// }

@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Game from "./components/Game";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Skills />
       {/* 作品集 */}
       <Portfolio />
+      {/* 遊戲 */}
+      {/* <Game /> */}
       {/* footer */}
       <ScrollToTop />
       <Footer />

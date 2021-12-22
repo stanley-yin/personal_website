@@ -1,0 +1,20 @@
+.contact_box {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.contact_content {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 0 ;
+    font-size: 20px;
+    color: var(--second);
+
+}
+
+.contact_content .icon{
+    margin-right: 15px;
+    margin-left: 10px;
+}
