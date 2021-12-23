@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const MyPageTitle = styled.h1`
-  padding: 50px;
+  padding: 50px 0 80px;
   text-align: center;
   font-size: 36px;
   font-weight: bold;

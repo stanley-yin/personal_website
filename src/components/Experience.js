@@ -7,15 +7,7 @@ import { BsBriefcase } from "react-icons/bs";
 import "./Experience.scss";
 import ExperienceItem from "./ExperienceItem";
 /* 經歷 */
-const ExperienceBox = styled.div`
-  position: relative;
-  padding: 5px 15px 50px;
-  margin: 0 auto 30px;
-  max-width: 80%;
-  @media screen and (max-width: 430px) {
-    max-width:100%
-  }
-`;
+
 
 const YellowBg = styled.div`
   background-color: var(--primary);
@@ -38,11 +30,20 @@ function Experience() {
     }
   };
 
+  window.addEventListener("scroll", () => {
+    const scrollPositionY = window.pageYOffset;
+    if(scrollPositionY>550){
+        const experienceBox = document.querySelector('.experienceBox')
+
+        experienceBox.style.opacity = 1
+    }
+  })
+
   return (
     <>
       <YellowBg>
         <div className="container">
-          <ExperienceBox className="text-center" id="myexperience">
+          <div className="text-center experienceBox" id="myexperience">
             <PageTitle title="Experience" />
             {/* work and eduacation */}
             <div className="row">
@@ -136,7 +137,7 @@ function Experience() {
                 </>
               )}
             </div>
-          </ExperienceBox>
+          </div>
         </div>
       </YellowBg>
     </>

@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
 import "./Header.scss";
+import "animate.css";
 
 const MyHeader = styled.div`
   width: 100%;
@@ -9,7 +11,9 @@ const MyHeader = styled.div`
   height: 90px;
   padding: 0 25px;
   box-shadow: 0px -20px 23px 6px #000000b2;
-
+  position: fixed;
+  top: 0;
+  z-index: 99999;
   @media screen and (max-width: 430px) {
     padding: 15px 20px;
     height: 60px;
@@ -30,23 +34,24 @@ const Logo = styled.div`
 const NavLinkBox = styled.div`
   width: 50%;
   font-size: 20px;
-  margin-left: 300px;
+  margin-left: 110px;
 `;
 const NavLink = styled.div`
   color: black;
 `;
 
 const ContactBox = styled.div`
-  width: 20%;
+  height: 100%;
+  background-color: var(--second);
+  color: var(--primary);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
 `;
 function Header() {
-  // const underLine = ()=>{
-  //   const navLine = document.querySelector('.navLine')
+  const contact = document.querySelector(".contact");
 
-  //   navLine.style.classList.add('')
-
-  // }
-
+  console.log(contact)
   return (
     <>
       <MyHeader
@@ -73,7 +78,11 @@ function Header() {
             </div>
           </NavLinkBox>
           {/* 右contect-box */}
-          <ContactBox className="d-xl-block d-none d-flex"></ContactBox>
+          <a href="#contact">
+            <ContactBox className="d-xl-block d-none d-flex contact">
+              <HiMail className="mail_icon" /> Contact
+            </ContactBox>
+          </a>
         </div>
 
         {/* 手機版bar */}

@@ -22,7 +22,7 @@ function Skills() {
         <Skill id="myskills">
           <PageTitle title={"Skills"} />
           <div className="row">
-            <div className="col-xl-6 mb-xl-5">
+            <div className="col-xl-4 mb-xl-5">
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
@@ -42,7 +42,7 @@ function Skills() {
                 </Accordion.Item>
               </Accordion>
             </div>
-            <div className="col-xl-6 mb-xl-5">
+            <div className="col-xl-4 mb-xl-5">
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
@@ -59,7 +59,7 @@ function Skills() {
                 </Accordion.Item>
               </Accordion>
             </div>
-            <div className="col-xl-6 mb-xl-5">
+            <div className="col-xl-4 mb-xl-5">
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>

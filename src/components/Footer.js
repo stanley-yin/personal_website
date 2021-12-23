@@ -13,7 +13,7 @@ const MyFooter = styled.div`
 function Footer() {
   return (
     <>
-      <MyFooter>
+      <MyFooter id="contact">
         <PageTitle title="Contact Me" />
         <div className="contact_box">
           <div className="contact_content">

@@ -7,11 +7,34 @@ import { FaFacebook } from "react-icons/fa";
 
 import "./Intro.scss";
 const MyIntro = styled.div`
+  margin-top: 90px;
   margin-bottom: 70px;
   @media screen and (max-width: 430px) {
     margin-bottom: 0px;
   }
 `;
+window.addEventListener("scroll", () => {
+  const scrollPositionY = window.pageYOffset;
+  const myPhoto = document.querySelector(".my_photo");
+  const ContentBox = document.querySelector(".content_box");
+  console.log(scrollPositionY)
+  
+  // 小於300時保持
+  if(scrollPositionY<300){
+    ContentBox.style.position = 'static';
+  }
+  if(scrollPositionY>300){
+    ContentBox.style.position = 'relative';
+  }
+  if(scrollPositionY<700){
+    myPhoto.style.transform = `translateY(${scrollPositionY*0.9}px)`;
+    ContentBox.style.transform = `translateY(${scrollPositionY*0.9}px)`;
+  }else{
+    myPhoto.style.transform = `translateY(650px)`;
+    ContentBox.style.transform = `translateY(650px)`;
+  }
+ 
+});
 
 function Intro() {
   return (

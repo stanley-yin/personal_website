@@ -1,3 +1,16 @@
+.experienceBox{
+  position: relative;
+  padding: 5px 15px 50px;
+  margin: 0 auto 30px;
+  max-width: 80%;
+  opacity:0; 
+  transition: .8s;
+  @media screen and (max-width: 430px) {
+    max-width:100%
+  }
+}
+
+
 .right_icon {
   margin-bottom: 3px;
   margin-left: 10px;
@@ -9,14 +22,18 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 100px;
+  position: relative;
+  z-index: -99;
   @media screen and (max-width: 430px) {
     width: 200px;
     height: 200px;
     margin: 20px auto;
   }
 }
+
 .content_box {
   margin-top: 200px;
+  z-index: -99;
   @media screen and (max-width: 430px) {
     position: relative;
     margin: 0 auto;
@@ -76,6 +93,7 @@
 }
 
 .cv_btn {
+  position: relative;
   width: 130px;
   height: 50px;
   border-radius: 42px;

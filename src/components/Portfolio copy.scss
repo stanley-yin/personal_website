@@ -1,58 +1,21 @@
 /* 作品集 */
 .portfolio {
-  width: 1000px;
+  max-width: 1000px;
+  outline: 1px solid aqua;
   margin: 0 auto;
-  position: relative;
-  overflow:hidden;
-
-}
-.train{
-  display: flex;
-  width: 3000px;
-  transition: .8s;
-
-}
-.car{
-  width: 1000px;
 }
 .project-item {
-  margin: 0 auto 50px;
-  width: 900px;
+  margin-bottom: 50px;
+  position: relative;
   @media screen and (max-width: 430px) {
     margin-bottom: 50px;
   }
 }
 
-// arrow
-.arrowRight , .arrowLeft{
-  position: absolute;
-  font-size: 30px;
-  bottom: 65px;
-  height: 300px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.arrowRight{
-  right:0px
-}
-.arrowLeft:hover,.arrowRight:hover{
-  color: var(--second);
-}
-
-
-.car_dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid gray;
-  margin: 5px;
-}
 .project-img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   border-radius: 20px;
-  border:1px solid gray;
   overflow: hidden;
 }
 
@@ -65,9 +28,6 @@
   }
 }
 
-.content{
-  margin-left: 15px;
-}
 .link {
   margin-bottom: 10px;
 }
@@ -81,9 +41,9 @@
 .tag {
   color: var(--second);
   background-color: var(--primary);
-  padding: 0px 10px;
+  padding: 5px 10px;
   border-radius: 6px;
-  margin: 0px 5px 5px 0;
+  margin: 5px 5px 5px 0;
   display: inline-block;
   @media screen and (max-width: 430px) {
     font-size: 14px;
