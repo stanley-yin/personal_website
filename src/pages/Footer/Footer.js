@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PageTitle from "./PageTitle";
+import PageTitle from "../../components/PageTitle";
 import "./Footer.scss";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";

@@ -3,28 +3,38 @@
   width: 1000px;
   margin: 0 auto;
   position: relative;
-  overflow:hidden;
-
+  overflow: hidden;
+  @media screen and (max-width: 430px) {
+    width: 100%;
+  }
 }
-.train{
+.train {
   display: flex;
   width: 3000px;
-  transition: .8s;
+  transition: 0.8s;
+  @media screen and (max-width: 430px) {
+  width: 3000px;
 
+  }
 }
-.car{
+.car {
   width: 1000px;
+  @media screen and (max-width: 430px) {
+    width: 404px;
+  }
 }
 .project-item {
   margin: 0 auto 50px;
   width: 900px;
   @media screen and (max-width: 430px) {
+    width: 90%;
     margin-bottom: 50px;
   }
 }
 
 // arrow
-.arrowRight , .arrowLeft{
+.arrowRight,
+.arrowLeft {
   position: absolute;
   font-size: 30px;
   bottom: 65px;
@@ -33,15 +43,15 @@
   cursor: pointer;
 }
 
-.arrowRight{
-  right:0px
+.arrowRight {
+  right: 0px;
 }
-.arrowLeft:hover,.arrowRight:hover{
+.arrowLeft:hover,
+.arrowRight:hover {
   color: var(--second);
 }
 
-
-.car_dot{
+.car_dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -52,7 +62,7 @@
   width: 100%;
   height: 300px;
   border-radius: 20px;
-  border:1px solid gray;
+  border: 1px solid gray;
   overflow: hidden;
 }
 
@@ -65,7 +75,7 @@
   }
 }
 
-.content{
+.content {
   margin-left: 15px;
 }
 .link {

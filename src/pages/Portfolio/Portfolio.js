@@ -1,33 +1,63 @@
 import React, { useState } from "react";
-import PageTitle from "./PageTitle";
-import { imgUrl } from "../config/index";
+import PageTitle from "../../components/PageTitle";
+import { imgUrl } from "../../config/index";
 import { Player } from "video-react";
 import "./Portfolio.scss";
-import PortfolioItem from "./PortfolioItem";
+import PortfolioItem from "../../components/PortfolioItem";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
 function Portfolio() {
   const [page, setPage] = useState(1);
 
+  const borwserWidth = window.innerWidth;
+
+  window.addEventListener("resize", () => {
+    console.log(borwserWidth);
+  });
+
+  // 左移
   const MoveLeft = () => {
     setPage(page - 1);
     const nowPage = page - 1;
     const train = document.querySelector(".train");
-    train.style.transform = `translateX(${-1000 * (nowPage - 1)}px)`;
-    if (nowPage < 1) {
-      train.style.transform = `translateX(-2000px)`;
-      setPage(page + 2);
+
+    if (borwserWidth > 430) {
+      // 電腦版移動
+      train.style.transform = `translateX(${-1000 * (nowPage - 1)}px)`;
+      if (nowPage < 1) {
+        train.style.transform = `translateX(-2000px)`;
+        setPage(page + 2);
+      }
+    } else {
+      //手機板移動
+      train.style.transform = `translateX(${-404 * (nowPage - 1)}px)`;
+      if (nowPage < 1) {
+        train.style.transform = `translateX(-808px)`;
+        setPage(page + 2);
+      }
     }
   };
+
+  // 右移
   const MoveRight = () => {
     setPage(page + 1);
     const nowPage = page + 1;
     const train = document.querySelector(".train");
-    train.style.transform = `translateX(${-1000 * (nowPage - 1)}px)`;
-    if (nowPage > 3) {
-      train.style.trasition = "0s";
-      train.style.transform = `translateX(0px)`;
-      setPage(page - 2);
+
+    if (borwserWidth > 430) {
+      train.style.transform = `translateX(${-1000 * (nowPage - 1)}px)`;
+      if (nowPage > 3) {
+        train.style.trasition = "0s";
+        train.style.transform = `translateX(0px)`;
+        setPage(page - 2);
+      }
+    } else {
+      train.style.transform = `translateX(${-404 * (nowPage - 1)}px)`;
+      if (nowPage > 3) {
+        train.style.trasition = "0s";
+        train.style.transform = `translateX(0px)`;
+        setPage(page - 2);
+      }
     }
   };
 
@@ -79,7 +109,7 @@ function Portfolio() {
           <MdArrowBackIos className="arrowLeft" onClick={MoveLeft} />
           <MdArrowForwardIos className="arrowRight" onClick={MoveRight} />
           <div className="dot_container d-flex justify-content-center">
-            <div className="car_dot" ></div>
+            <div className="car_dot"></div>
             <div className="car_dot"></div>
             <div className="car_dot"></div>
           </div>

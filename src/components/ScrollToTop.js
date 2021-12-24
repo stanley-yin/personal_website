@@ -13,11 +13,21 @@ const ScrollTopBtn = styled.div`
   border-radius: 50%;
   background-color: white;
   box-shadow: 0px 1px 8px 1px gray;
+  @media screen and (max-width: 430px) {
+    bottom: 100px;
+    right: 30px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 1px 8px 1px gray;
+  }
 `;
 function ScrollToTop() {
   return (
     <>
-      <a href="#header">
+      <a href="#">
         <ScrollTopBtn>
           <AiOutlineArrowUp />
         </ScrollTopBtn>

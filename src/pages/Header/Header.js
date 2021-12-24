@@ -51,7 +51,7 @@ const ContactBox = styled.div`
 function Header() {
   const contact = document.querySelector(".contact");
 
-  console.log(contact)
+  console.log(contact);
   return (
     <>
       <MyHeader
@@ -77,7 +77,8 @@ function Header() {
               <div className="nav-line"></div>
             </div>
           </NavLinkBox>
-          {/* 右contect-box */}
+
+          {/* 右contact-box */}
           <a href="#contact">
             <ContactBox className="d-xl-block d-none d-flex contact">
               <HiMail className="mail_icon" /> Contact

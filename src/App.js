@@ -1,18 +1,41 @@
 import "./App.css";
-import Header from "./components/Header";
-import Intro from "./components/Intro";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
-import Footer from "./components/Footer";
+import { useState } from "react";
+import Header from "./pages/Header/Header";
+import Intro from "./pages/Intro/Intro";
+import Experience from "./pages/Experience/Experience";
+import Skills from "./pages/Skills/Skills";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Footer from "./pages/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Game from "./components/Game";
 
 function App() {
+  // 預設是電腦版
+  const [isMobile, setIsMobile] = useState(false);
+  let borwserWidth;
+  // let scrollPositionY;
+
+  // 判斷現在網頁畫面寬度
+  window.addEventListener("resize", () => {
+    borwserWidth = window.innerWidth;
+    console.log(borwserWidth);
+    if (borwserWidth < 430) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  });
+
+  // 判斷現在滑動到哪裡
+  // window.addEventListener("scroll", () => {
+  //   scrollPositionY = window.pageYOffset;
+  //   console.log(scrollPositionY);
+  // });
+
   return (
     <>
       <Header />
-      <Intro />
+      <Intro isMobile={isMobile} />
       {/* 經歷 */}
       <Experience />
 

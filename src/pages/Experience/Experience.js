@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import PageTitle from "./PageTitle";
-import { imgUrl } from "../config/index";
+import PageTitle from "../../components/PageTitle";
+import { imgUrl } from "../../config/index";
 import { IoSchoolOutline } from "react-icons/io5";
 import { BsBriefcase } from "react-icons/bs";
 import "./Experience.scss";
-import ExperienceItem from "./ExperienceItem";
+import ExperienceItem from "../../components/ExperienceItem";
 /* 經歷 */
-
 
 const YellowBg = styled.div`
   background-color: var(--primary);
+  height:800px;
+  @media screen and (max-width: 430px) {
+  height:auto;
+
+  }
 `;
 
 function Experience() {
@@ -32,12 +36,12 @@ function Experience() {
 
   window.addEventListener("scroll", () => {
     const scrollPositionY = window.pageYOffset;
-    if(scrollPositionY>550){
-        const experienceBox = document.querySelector('.experienceBox')
+    if (scrollPositionY > 550) {
+      const experienceBox = document.querySelector(".experienceBox");
 
-        experienceBox.style.opacity = 1
+      experienceBox.style.opacity = 1;
     }
-  })
+  });
 
   return (
     <>

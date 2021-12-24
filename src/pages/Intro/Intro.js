@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { imgUrl } from "../config/index";
+import { imgUrl } from "../../config/index";
 import { MdArrowForwardIos } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
@@ -13,30 +13,49 @@ const MyIntro = styled.div`
     margin-bottom: 0px;
   }
 `;
-window.addEventListener("scroll", () => {
-  const scrollPositionY = window.pageYOffset;
-  const myPhoto = document.querySelector(".my_photo");
-  const ContentBox = document.querySelector(".content_box");
-  console.log(scrollPositionY)
-  
-  // 小於300時保持
-  if(scrollPositionY<300){
-    ContentBox.style.position = 'static';
-  }
-  if(scrollPositionY>300){
-    ContentBox.style.position = 'relative';
-  }
-  if(scrollPositionY<700){
-    myPhoto.style.transform = `translateY(${scrollPositionY*0.9}px)`;
-    ContentBox.style.transform = `translateY(${scrollPositionY*0.9}px)`;
-  }else{
-    myPhoto.style.transform = `translateY(650px)`;
-    ContentBox.style.transform = `translateY(650px)`;
-  }
- 
-});
 
-function Intro() {
+function Intro(props) {
+  const { isMobile } = props;
+
+  window.addEventListener("scroll", () => {
+    const scrollPositionY = window.pageYOffset;
+    const myPhoto = document.querySelector(".my_photo");
+    const ContentBox = document.querySelector(".content_box");
+
+    if (isMobile === true) {
+      // 手機板
+      // 小於300時保持
+      if (scrollPositionY < 70) {
+        ContentBox.style.position = "static";
+      }
+      if (scrollPositionY > 70) {
+        ContentBox.style.position = "relative";
+      }
+      if (scrollPositionY < 500) {
+        myPhoto.style.transform = `translateY(${scrollPositionY}px)`;
+        ContentBox.style.transform = `translateY(${scrollPositionY}px)`;
+      } else {
+        myPhoto.style.transform = `translateY(500px)`;
+        ContentBox.style.transform = `translateY(500px)`;
+      }
+    } else {
+      // 電腦版
+      // 小於300時保持
+      if (scrollPositionY < 300) {
+        ContentBox.style.position = "static";
+      }
+      if (scrollPositionY > 300) {
+        ContentBox.style.position = "relative";
+      }
+      if (scrollPositionY < 700) {
+        myPhoto.style.transform = `translateY(${scrollPositionY * 0.9}px)`;
+        ContentBox.style.transform = `translateY(${scrollPositionY * 0.9}px)`;
+      } else {
+        myPhoto.style.transform = `translateY(650px)`;
+        ContentBox.style.transform = `translateY(650px)`;
+      }
+    }
+  });
   return (
     <>
       <div className="container">

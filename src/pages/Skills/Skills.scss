@@ -1,0 +1,44 @@
+.skill_container {
+  max-width: 1000px;
+  margin: 0 auto 100px;
+}
+
+.card_box {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  //   border: .5px solid var(--second);
+  background-color: rgba(243, 243, 239, 0.602);
+  transition: 0.3s;
+  border-radius: 10px;
+  @media screen and (max-width: 430px) {
+    margin: 10px auto;
+    height: auto;
+  }
+}
+
+.card_box:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12);
+}
+.card_title {
+  color: var(--second);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  @media screen and (max-width: 430px) {
+    padding: 5px 0;
+    font-size: 1.2rem;
+  }
+}
+
+.card_content {
+  color: #645647;
+  margin: 15px 0;
+  font-size: 1.2rem;
+  @media screen and (max-width: 430px) {
+    font-size: 1rem;
+  }
+}
