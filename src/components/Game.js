@@ -7,15 +7,15 @@ function Game() {
   return (
 
     <div className="game_container">
-        <div class="row">
-          <div class="box">
-            <div class="score-box d-flex m-2 ml-5">
+        <div className="row">
+          <div className="box">
+            <div className="score-box d-flex m-2 ml-5">
               分數
-              <div class="score"></div>
+              <div className="score"></div>
             </div>
             <button onclick="startGame()">開始遊戲</button>
     
-            {/* <svg class="stanley" width="100px">
+            {/* <svg className="stanley" width="100px">
               <g id="layer1" transform="translate(-242.88 -137.41)">
                 <g id="g1950">
                   <path
@@ -62,10 +62,10 @@ function Game() {
                 </g>
               </g>
             </svg> */}
-            <div class="stone"></div>
-            <div class="coin"></div>
+            <div className="stone"></div>
+            <div className="coin"></div>
           </div>
-          {/* <div class="score-board d-flex justify-content-center">
+          {/* <div className="score-board d-flex justify-content-center">
             <h3>計分板</h3>
             <ul></ul>
           </div> */}

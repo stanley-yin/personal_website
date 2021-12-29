@@ -10,8 +10,9 @@
 }
 .train {
   display: flex;
-  width: 3000px;
+  width: 5000px;
   transition: 0.8s;
+  transform: translateX(-1000px);
   @media screen and (max-width: 430px) {
   width: 3000px;
 
@@ -57,6 +58,7 @@
   border-radius: 50%;
   border: 1px solid gray;
   margin: 5px;
+  transition: .1s;
 }
 .project-img {
   width: 100%;
@@ -86,6 +88,7 @@
 }
 .project-content {
   line-height: 1.5rem;
+  margin-top: 20px;
 }
 
 .tag {
@@ -100,12 +103,3 @@
   }
 }
 
-// .demo_btn {
-//   color: white;
-//   line-height: 45px;
-//   padding: 0px 10px;
-//   background-color: var(--second);
-//   border-radius: 10px;
-//   position: absolute;
-//   bottom: 0px;
-// }

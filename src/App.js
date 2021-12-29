@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import Header from "./pages/Header/Header";
 import Intro from "./pages/Intro/Intro";
 import Experience from "./pages/Experience/Experience";
@@ -12,6 +12,7 @@ import Game from "./components/Game";
 function App() {
   // 預設是電腦版
   const [isMobile, setIsMobile] = useState(false);
+  // const [scrollPositionY,setScrollPositionY] = useState(0)
   let borwserWidth;
   // let scrollPositionY;
 
@@ -26,11 +27,14 @@ function App() {
     }
   });
 
-  // 判斷現在滑動到哪裡
-  // window.addEventListener("scroll", () => {
-  //   scrollPositionY = window.pageYOffset;
-  //   console.log(scrollPositionY);
-  // });
+  // useEffect(()=>{
+  //   // 判斷現在滑動到哪裡
+  //   window.addEventListener("scroll", () => {
+  //     const newY = window.pageYOffset;
+  //     setScrollPositionY(newY)
+  //     console.log(scrollPositionY);
+  //   });
+  // },[scrollPositionY])
 
   return (
     <>
@@ -42,7 +46,7 @@ function App() {
       {/* 技能 */}
       <Skills />
       {/* 作品集 */}
-      <Portfolio />
+      <Portfolio isMobile={isMobile}/>
       {/* 遊戲 */}
       {/* <Game /> */}
       {/* footer */}

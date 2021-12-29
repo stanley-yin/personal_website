@@ -10,7 +10,7 @@ import ExperienceItem from "../../components/ExperienceItem";
 
 const YellowBg = styled.div`
   background-color: var(--primary);
-  height:800px;
+  height:650px;
   @media screen and (max-width: 430px) {
   height:auto;
 

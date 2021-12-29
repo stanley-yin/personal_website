@@ -22,31 +22,30 @@ function PortfolioItem(props) {
             {/* 作品縮圖 */}
             {imgFileName && (
               <a href={link} target="_blank" rel="noreferrer" alt="">
-                <div class="project-img">
+                <div className="project-img">
                   <img src={`${imgUrl}/images/${imgFileName}`} alt="" />
                 </div>
               </a>
             )}
             {/* 作品demo影片 */}
             {videoSrc && (
-              <div class="project-img">
+              <div className="project-img">
                 <iframe
                   width="100%"
                   height="300px"
                   src={videoSrc}
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen"
-                  allowfullscreen
                 ></iframe>
               </div>
             )}
           </div>
 
-          <div class="col-xl-6">
+          <div className="col-xl-6">
             <div className="content">
               {/* 主標題 */}
-              <h3 class="project-title">{title}</h3>
+              <h3 className="project-title">{title}</h3>
   
               {/* hashtag */}
               {hashtag.map((v, i) => {
@@ -58,7 +57,7 @@ function PortfolioItem(props) {
               })}
   
               {/* 內文 */}
-              <p class="project-content">{content}</p>
+              <p className="project-content">{content}</p>
   
               {/* View More Btn */}
               {/* <a href={link} target="_blank" rel="noreferrer" alt="">

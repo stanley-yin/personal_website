@@ -12,6 +12,18 @@ import { RiPencilRuler2Fill } from "react-icons/ri";
 
 
 function Skills() {
+
+  // 出現小動畫
+  window.addEventListener("scroll", () => {
+    const scrollPositionY = window.pageYOffset;
+    if (scrollPositionY > 1000) {
+      const skill = document.querySelector(".skill_container");
+
+      skill.style.opacity = 1;
+    }
+  });
+
+
   return (
     <>
       <div className="container">

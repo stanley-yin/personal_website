@@ -110,7 +110,7 @@ function Intro(props) {
                 >
                   <button className="cv_btn">
                     查看CV
-                    <MdArrowForwardIos class="right_icon" />
+                    <MdArrowForwardIos className="right_icon" />
                   </button>
                 </a>
               </div>
