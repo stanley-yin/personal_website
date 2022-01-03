@@ -118,7 +118,7 @@ function Portfolio(props) {
             {/* inline切版 */}
             <li className="car">
               <PortfolioItem
-                imgFileName="inline.png"
+                imgFileName="inline.jpg"
                 title="Inline官網切版"
                 link="https://stanley-yin.github.io/inline/inline.html"
                 hashtag={["HTML", "CSS", "BootStrap", "JavaScript"]}
