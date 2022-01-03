@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { imgUrl } from "../../config/index";
 import { MdArrowForwardIos } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
-import { FaFacebook } from "react-icons/fa";
+import { ImLinkedin } from "react-icons/im";
 
 import "./Intro.scss";
 const MyIntro = styled.div`
@@ -77,11 +77,11 @@ function Intro(props) {
                   {/* 個人社群連結 */}
                   <div className="media_box">
                     <a
-                      href="https://www.facebook.com/profile.php?id=100001595680457"
+                      href="https://www.linkedin.com/in/%E7%9B%B8%E5%AE%B8-%E5%B0%B9-9987ba190/"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FaFacebook className="social_media_icon " />
+                      <ImLinkedin className="social_media_icon " />
                     </a>
                     <a
                       href="https://github.com/stanley-yin"
