@@ -49,9 +49,11 @@ const ContactBox = styled.div`
   border-radius: 20px;
 `;
 function Header() {
-  const contact = document.querySelector(".contact");
+  const openMenu = () => {
+    const mbar = document.querySelector(".mobilebar");
 
-  console.log(contact);
+    mbar.classList.toggle("show");
+  };
   return (
     <>
       <MyHeader
@@ -88,9 +90,40 @@ function Header() {
 
         {/* 手機版bar */}
         <div className="bar-icon d-xl-none">
-          <FaBars />
+          <FaBars onClick={openMenu} />
         </div>
       </MyHeader>
+
+      {/* 手機板下方選單 */}
+      <div className="mobilebar">
+        <h3
+          className="nav-link"
+          onClick={() => {
+            document.querySelector(".mobilebar").classList.remove("show");
+          }}
+        >
+          {" "}
+          <a href="#myexperience">Experience</a>
+        </h3>
+        <h3
+          className="nav-link"
+          onClick={() => {
+            document.querySelector(".mobilebar").classList.remove("show");
+          }}
+        >
+          {" "}
+          <a href="#myskills">Skills</a>
+        </h3>
+        <h3
+          className="nav-link"
+          onClick={() => {
+            document.querySelector(".mobilebar").classList.remove("show");
+          }}
+        >
+          {" "}
+          <a href="#myportfolio">Portfolio</a>
+        </h3>
+      </div>
     </>
   );
 }

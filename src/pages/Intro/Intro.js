@@ -15,31 +15,20 @@ const MyIntro = styled.div`
 `;
 
 function Intro(props) {
-  const { isMobile } = props;
+  const { isMobile, scrollPositionY } = props;
 
-  window.addEventListener("scroll", () => {
-    const scrollPositionY = window.pageYOffset;
+  // isMobile 跟 scroll 位置重新傳props時運作
+  useEffect(() => {
     const myPhoto = document.querySelector(".my_photo");
     const ContentBox = document.querySelector(".content_box");
 
     if (isMobile === true) {
-      // 手機板
-      // 小於300時保持
-      if (scrollPositionY < 70) {
-        ContentBox.style.position = "static";
-      }
-      if (scrollPositionY > 70) {
-        ContentBox.style.position = "relative";
-      }
-      if (scrollPositionY < 500) {
-        myPhoto.style.transform = `translateY(${scrollPositionY}px)`;
-        ContentBox.style.transform = `translateY(${scrollPositionY}px)`;
-      } else {
-        myPhoto.style.transform = `translateY(500px)`;
-        ContentBox.style.transform = `translateY(500px)`;
-      }
+      // 手機板不移動
+      myPhoto.style.transform = `translateY(0px)`;
+      ContentBox.style.transform = `translateY(0px)`;
+      ContentBox.style.position = "static";
     } else {
-      // 電腦版
+      // 電腦版產生parallox效果
       // 小於300時保持
       if (scrollPositionY < 300) {
         ContentBox.style.position = "static";
@@ -55,7 +44,8 @@ function Intro(props) {
         ContentBox.style.transform = `translateY(650px)`;
       }
     }
-  });
+  }, [isMobile, scrollPositionY]);
+
   return (
     <>
       <div className="container">

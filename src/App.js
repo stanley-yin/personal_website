@@ -7,14 +7,12 @@ import Skills from "./pages/Skills/Skills";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Footer from "./pages/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import Game from "./components/Game";
 
 function App() {
   // 預設是電腦版
   const [isMobile, setIsMobile] = useState(false);
-  // const [scrollPositionY,setScrollPositionY] = useState(0)
+  const [scrollPositionY,setScrollPositionY] = useState(0)
   let borwserWidth;
-  // let scrollPositionY;
 
   // 判斷現在網頁畫面寬度
   window.addEventListener("resize", () => {
@@ -27,19 +25,16 @@ function App() {
     }
   });
 
-  // useEffect(()=>{
-  //   // 判斷現在滑動到哪裡
-  //   window.addEventListener("scroll", () => {
-  //     const newY = window.pageYOffset;
-  //     setScrollPositionY(newY)
-  //     console.log(scrollPositionY);
-  //   });
-  // },[scrollPositionY])
+   // 判斷現在滑動到哪裡
+   window.addEventListener("scroll", () => {
+    setScrollPositionY(window.pageYOffset);
+  });
+
 
   return (
     <>
       <Header />
-      <Intro isMobile={isMobile} />
+      <Intro isMobile={isMobile} scrollPositionY={scrollPositionY}/>
       {/* 經歷 */}
       <Experience />
 
