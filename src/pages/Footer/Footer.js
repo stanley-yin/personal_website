@@ -9,6 +9,9 @@ const MyFooter = styled.div`
   margin-top: 50px;
   height: 500px;
   background-color: var(--primary);
+  @media screen and (max-width: 430px) {
+    height: 300px;
+  }
 `;
 function Footer() {
   return (
@@ -25,7 +28,7 @@ function Footer() {
             0972438496
           </div>
           <div className="contact_content">
-            <HiOutlineLocationMarker className="icon"/> taipei
+            <HiOutlineLocationMarker className="icon" /> taipei
           </div>
         </div>
       </MyFooter>

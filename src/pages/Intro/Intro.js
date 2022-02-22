@@ -7,9 +7,9 @@ import { ImLinkedin } from "react-icons/im";
 
 import "./Intro.scss";
 const MyIntro = styled.div`
-  margin-top: 90px;
   margin-bottom: 70px;
   @media screen and (max-width: 430px) {
+    margin-top: 90px;
     margin-bottom: 0px;
   }
 `;
